@@ -11,6 +11,7 @@ import {
   ListItemIcon,
   Typography,
   useTheme,
+  Link,
 } from "@mui/material";
 import {
   SettingsOutlined,
@@ -28,6 +29,7 @@ import {
   TrendingUpOutlined,
   PieChartOutlined,
 } from "@mui/icons-material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
@@ -191,7 +193,7 @@ const Sidebar = ({
               })}
             </List>
           </Box>
-          <Box position="absolute" bottom="2rem">
+          <Box position="absolute" bottom="5rem">
             <Divider />
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
@@ -222,6 +224,38 @@ const Sidebar = ({
                 sx={{ color: theme.palette.secondary[300] }}
                 fontSize="25px"
               />
+            </FlexBetween>
+          </Box>
+          <Box position="absolute" bottom="1rem" width="95%">
+            <Divider />
+            <FlexBetween
+              textTransform="none"
+              gap="0rem"
+              m="1rem 6rem -1rem 4.5rem"
+            >
+              <Box
+                height="40px"
+                width="40px"
+                borderRadius="50%"
+                sx={{ objectFit: "cover" }}
+              >
+                <GitHubIcon />
+              </Box>
+              <Box textaling="left">
+                <Typography
+                  variant="body2"
+                  color={theme.palette.secondary[100]}
+                  fontWeight="bold"
+                  sx={{ mb: "15px" }}
+                >
+                  <Link
+                    color="inherit"
+                    href="https://github.com/nikhil-ravi/MERN-admin-dashboard"
+                  >
+                    GitHub
+                  </Link>
+                </Typography>
+              </Box>
             </FlexBetween>
           </Box>
         </Drawer>
