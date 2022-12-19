@@ -10,6 +10,7 @@ import {
   Rating,
   useTheme,
   useMediaQuery,
+  CircularProgress,
 } from "@mui/material";
 import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
@@ -122,7 +123,7 @@ const Products = () => {
           )}
         </Box>
       ) : (
-        <>Loading...</>
+        <CircularProgress />
       )}
     </Box>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, useTheme } from "@mui/material";
+import { Box, CircularProgress, useTheme } from "@mui/material";
 import { useGetGeographyQuery } from "state/api";
 import Header from "components/Header";
 import { ResponsiveChoropleth } from "@nivo/geo";
@@ -92,7 +92,7 @@ const Geography = () => {
             ]}
           />
         ) : (
-          <>Loading...</>
+          <CircularProgress />
         )}
       </Box>
     </Box>
